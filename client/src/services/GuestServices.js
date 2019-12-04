@@ -12,12 +12,9 @@ addGuests(payload){
   })
     .then(res => res.json())
   },
-  deleteGuests(payload){
-    return fetch(baseURL, {
+  deleteGuests(id){
+    return fetch(baseURL + id, {
       method: 'DELETE',
-      body: JSON.stringify(payload),
-      headers: {'Content-Type': 'application/json'}
-    })
-    .then(res => res.json())
+    }); 
   }
 }
