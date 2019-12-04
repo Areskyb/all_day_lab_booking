@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import GuestServices from '../services/Guest-Services'
-import { eventBus } from '../main'; 
+import GuestServices from '../services/GuestServices'
+import { eventBus } from '../main';
 
 
 export default {
