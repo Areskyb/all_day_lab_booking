@@ -10,6 +10,7 @@
       <option value="true">Checked In</option>
       <option value="false">Not Checked In</option>
     </select>
+    <input type="submit" name="" value="Submit Booking">
   </form>
 </template>
 
@@ -35,7 +36,7 @@ export default {
         email: this.email,
         checkedStatus: this.checkedStatus
       }
-    GuestServices.postGuests(guest)
+    GuestServices.addGuests(guest)
     .then(res => eventBus.$emit('guest-added', res))}
   }
 }
