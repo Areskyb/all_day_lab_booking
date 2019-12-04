@@ -1,12 +1,14 @@
 <template lang="html">
   <div id="app">
 <guest-form/>
+<guest-grid :guests="guests"></guest-grid>
   </div>
 </template>
 
 <script>
 import GuestForm from './components/GuestForm';
 import GuestServices from './services/GuestServices';
+import GuestGrid from './components/GuestGrid';
 import { eventBus } from './main';
 
 export default {
@@ -17,7 +19,8 @@ export default {
     }
   },
   components: {
-    'guest-form': GuestForm
+    'guest-form': GuestForm,
+    'guest-grid': GuestGrid
   },
   mounted(){
     this.fetchData();
