@@ -17,6 +17,14 @@ export default {
   },
   components: {
     'guest-form': GuestForm
+  },
+  mounted(){
+
+  },
+  methods: {
+    fetchData(){
+      
+    }
   }
 }
 </script>
