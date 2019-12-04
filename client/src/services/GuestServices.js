@@ -5,12 +5,19 @@ export default {
     .then(res => res.json())
   },
 postGuests(payload){
-  console.log("payload", payload);
   return fetch(baseURL, {
     method:'POST',
     body: JSON.stringify(payload),
     headers: {'Content-Type': 'application/json'}
   })
+    .then(res => res.json())
+  },
+  deleteGuests(payload){
+    return fetch(baseURL, {
+      method: 'DELETE',
+      body: JSON.stringify(payload),
+      headers: {'Content-Type': 'application/json'}
+    })
     .then(res => res.json())
   }
 }

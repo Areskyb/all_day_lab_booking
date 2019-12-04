@@ -14,6 +14,10 @@
 </template>
 
 <script>
+import GuestServices from '../services/Guest-Services'
+import { eventBus } from '../main'; 
+
+
 export default {
   name: 'guest-form',
   data(){
@@ -22,6 +26,17 @@ export default {
       email: "",
       checkedStatus: ""
     }
+  },
+  methods: {
+    addGuest(event)
+    {event.preventDefault()
+      const guest = {
+        name: this.name,
+        email: this.email,
+        checkedStatus: this.checkedStatus
+      }
+    GuestServices.postGuests(guest)
+    .then(res => eventBus.$emit('guest-added', res))}
   }
 }
 </script>
