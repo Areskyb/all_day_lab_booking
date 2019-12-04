@@ -2,13 +2,13 @@
   <form v-on:submit="addGuest" method="post" id="guestForm">
     <h2>Add a Guest</h2>
     <label for="name">Name:</label>
-    <input type="text" id="name" v-model="name">
+    <input type="text" id="name" v-model="name" required>
     <label for="email">Email Address:</label>
-    <input type="text" id="email" v-model="email">
+    <input type="text" id="email" v-model="email" required>
     <label for="guest">Check Status:</label>
-    <select class="" v-model="checkedStatus"name="">
-      <option value="true">Checked In</option>
-      <option value="false">Not Checked In</option>
+    <select class="" v-model="checkedStatus"required>
+      <option value="checked in">Checked In</option>
+      <option value="not checked in">Not Checked In</option>
     </select>
     <input type="submit" name="" value="Submit Booking">
   </form>
